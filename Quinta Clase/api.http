@@ -1,0 +1,37 @@
+GET http://localhost:1234/movies
+
+###
+
+GET http://localhost:1234/movies/38fd462d-d01d-11ee-a324-00155d21a5b4
+
+###
+
+GET http://localhost:1234/movies?genre=Drama
+
+###
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Spider-man: into the spider-verse",
+  "year": 2018,
+  "director": "Peter Ramsey",
+  "duration": 117,
+  "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
+  "genre": ["Action", "Comedy", "Action"],
+  "rate": 8.4
+}
+
+###
+
+DELETE http://localhost:1234/movies/064d7d48-d055-11ee-941c-00155de928d9
+
+###
+
+PATCH  http://localhost:1234/movies/09578cad-d055-11ee-941c-00155de928d9
+Content-Type: application/json
+
+{
+  "year": 2018
+}
